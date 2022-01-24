@@ -10,5 +10,5 @@
 - I repeat in the course of algorithms and data structures. And when I retake the course I only got a C :(.
 
 ## References
-- Visual Algo ny NUS: https://visualgo.net/en
+- Visual Algo by NUS: https://visualgo.net/en
 - The Algorithm: https://the-algorithms.com/
