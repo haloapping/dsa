@@ -1,5 +1,5 @@
 import unittest
-from main.DequeWithList import DequeWithList
+from main.queue.DequeWithList import DequeWithList
 
 
 class DequeWithListTest(unittest.TestCase):

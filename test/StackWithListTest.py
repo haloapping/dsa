@@ -1,5 +1,5 @@
 import unittest
-from main.StackWithList import StackWithList
+from main.stack.StackWithList import StackWithList
 
 
 class StackWithListTest(unittest.TestCase):

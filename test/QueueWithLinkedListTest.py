@@ -1,5 +1,5 @@
 import unittest
-from main.QueueWithLinkedList import QueueWithLinkedList
+from main.queue.QueueWithLinkedList import QueueWithLinkedList
 
 
 class QueueWithLinkedListTest(unittest.TestCase):

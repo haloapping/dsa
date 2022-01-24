@@ -1,6 +1,6 @@
 import random
 import unittest
-from main.SelectionSort import SelectionSort
+from main.sort.SelectionSort import SelectionSort
 
 value_range = 10
 unsorted_items = [random.randint(-value_range, value_range)

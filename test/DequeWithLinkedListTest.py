@@ -1,5 +1,6 @@
 import unittest
-from main.DequeWithLinkedList import DequeWithLinkedList
+
+from main.queue.DequeWithLinkedList import DequeWithLinkedList
 
 
 class DequeWithLinkedListTest(unittest.TestCase):

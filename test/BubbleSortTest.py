@@ -1,6 +1,7 @@
 import random
 import unittest
-from main.BubbleSort import BubbleSort
+
+from main.sort.BubbleSort import BubbleSort
 
 unsorted_items = [random.randint(-1000, 1_000) for _ in range(1_000)]
 asc_sorted_items = sorted(unsorted_items)

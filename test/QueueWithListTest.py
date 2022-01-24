@@ -1,5 +1,5 @@
 import unittest
-from main.QueueWithList import QueueWithList
+from main.queue.QueueWithList import QueueWithList
 
 
 class QueueWithListTest(unittest.TestCase):
