@@ -11,7 +11,7 @@ class SinglyLinkedList:
     def __init__(self) -> None:
         self.head = None
 
-    def __iter__(self) -> None:
+    def __iter__(self) -> Any:
         current_node = self.head
         while current_node:
             yield current_node.data
@@ -53,7 +53,6 @@ class SinglyLinkedList:
         return f"Data {data} inserted."
 
     def delete_by_index(self, index: int) -> str:
-        delete_node = self.head
         if self.is_empty():
             return "Linked list is empty."
         elif not 0 <= index <= len(self) - 1:

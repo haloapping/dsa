@@ -8,9 +8,21 @@ class DequeWithLinkedListTest(unittest.TestCase):
         deque = DequeWithLinkedList(5)
         self.assertEqual(deque.peek_front(), "Queue is empty.")
 
+    def test_peek_front_when_not_empty(self):
+        deque = DequeWithLinkedList(5)
+        for i in range(5):
+            deque.enqueue_front(i)
+        self.assertEqual(deque.peek_front(), "4")
+
     def test_peek_rear_when_empty(self):
         deque = DequeWithLinkedList(5)
         self.assertEqual(deque.peek_rear(), "Queue is empty.")
+
+    def test_peek_rear_when_not_empty(self):
+        deque = DequeWithLinkedList(5)
+        for i in range(5):
+            deque.enqueue_rear(i)
+        self.assertEqual(deque.peek_rear(), "4")
 
     def test_enqueue_front_when_full(self):
         deque = DequeWithLinkedList(5)

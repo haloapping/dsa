@@ -27,13 +27,11 @@ class DequeWithLinkedList:
     def is_full(self):
         return len(self) == self.max_capacity
 
-    def peek_front(self):
-        if self.is_empty():
-            return "Queue is empty."
+    def peek_front(self) -> str:
+        return "Queue is empty." if self.is_empty() else str(tuple(iter(self))[0])
 
     def peek_rear(self):
-        if self.is_empty():
-            return "Queue is empty."
+        return "Queue is empty." if self.is_empty() else str(tuple(iter(self))[-1])
 
     def enqueue_front(self, data: Any) -> str:
         if self.is_full():

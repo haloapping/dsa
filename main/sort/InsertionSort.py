@@ -26,7 +26,7 @@ class InsertionSort:
                 insert_index -= 1
             if insert_index != temp_index:
                 self.datas[insert_index + 1] = insert_value
-        return str(self.datas)
+        return self.datas
 
     def sort(self, mode: str) -> str:
         """
