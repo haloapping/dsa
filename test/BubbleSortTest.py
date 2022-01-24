@@ -3,13 +3,14 @@ import unittest
 
 from main.sort.BubbleSort import BubbleSort
 
-unsorted_items = [random.randint(-1000, 1_000) for _ in range(1_000)]
+value = 10
+unsorted_items = [random.randint(-value, value) for _ in range(value)]
 asc_sorted_items = sorted(unsorted_items)
 desc_sorted_items = sorted(unsorted_items, reverse=True)
-sorted_items = list(range(10_000))
+sorted_items = list(range(value))
 
 
-class BubbleSortTest(unittest.TestCase, unittest.TestLoader):
+class BubbleSortTest(unittest.TestCase):
     def test_is_empty(self):
         bubble_sort = BubbleSort([])
         self.assertEqual(bubble_sort.print(), "List of data is empty.")
