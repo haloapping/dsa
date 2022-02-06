@@ -21,6 +21,9 @@ class SinglyLinkedList:
         """Get number of node from linked list."""
         return len(tuple(iter(self)))
 
+    def is_empty(self) -> bool:
+        return len(self) == 0
+
     def insert_head(self, data: Any) -> str:
         return self.insert_by_index(0, data)
 
@@ -68,9 +71,6 @@ class SinglyLinkedList:
             delete_node = current_node.next
             current_node.next = current_node.next.next
             return f"Data {delete_node.data} deleted."
-
-    def is_empty(self) -> bool:
-        return len(self) == 0
 
     def traverse(self) -> str:
         return "Linked list is empty." if self.is_empty() else "->".join([str(data) for data in self])

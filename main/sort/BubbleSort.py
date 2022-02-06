@@ -1,15 +1,15 @@
-from typing import Any
+from typing import Any, List
 
 
 class BubbleSort:
-    def __init__(self, datas: list) -> None:
+    def __init__(self, datas: List[Any]) -> None:
         self.datas = datas
         self.swapped = False
 
     def __is_empty(self) -> bool:
         return len(self.datas) == 0
 
-    def __ascending(self) -> list[Any]:
+    def __ascending(self) -> List[Any]:
         for i in range(len(self.datas)):
             for j in range(len(self.datas) - i - 1):
                 if self.datas[j] > self.datas[j + 1]:
@@ -20,7 +20,7 @@ class BubbleSort:
                 break
         return self.datas
 
-    def __descending(self) -> list[Any]:
+    def __descending(self) -> List[Any]:
         for i in range(len(self.datas)):
             for j in range(len(self.datas) - i - 1):
                 if self.datas[j] < self.datas[j + 1]:

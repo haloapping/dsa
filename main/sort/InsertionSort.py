@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 
 
 class InsertionSort:
@@ -8,7 +8,7 @@ class InsertionSort:
     def is_empty(self) -> bool:
         return len(self.datas) == 0
 
-    def __ascending(self) -> list[Any]:
+    def __ascending(self) -> List[Any]:
         for insert_index, insert_value in enumerate(self.datas[1:]):
             temp_index = insert_index
             while insert_index >= 0 and insert_value < self.datas[insert_index]:
@@ -18,7 +18,7 @@ class InsertionSort:
                 self.datas[insert_index + 1] = insert_value
         return self.datas
 
-    def __descending(self) -> list[Any]:
+    def __descending(self) -> List[Any]:
         for insert_index, insert_value in enumerate(self.datas[1:]):
             temp_index = insert_index
             while insert_index >= 0 and insert_value > self.datas[insert_index]:

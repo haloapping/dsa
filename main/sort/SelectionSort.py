@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, List
 
 
 class SelectionSort:
@@ -8,7 +8,7 @@ class SelectionSort:
     def is_empty(self) -> bool:
         return len(self.datas) == 0
 
-    def __ascending(self) -> list[Any]:
+    def __ascending(self) -> List[Any]:
         for i in range(len(self.datas) - 1):
             index_min_value = i
             for j in range(i + 1, len(self.datas)):
@@ -18,7 +18,7 @@ class SelectionSort:
                 self.datas[index_min_value], self.datas[i] = self.datas[i], self.datas[index_min_value]
         return self.datas
 
-    def __descending(self) -> list[Any]:
+    def __descending(self) -> List[Any]:
         for i in range(len(self.datas) - 1):
             index_min_value = i
             for j in range(i + 1, len(self.datas)):

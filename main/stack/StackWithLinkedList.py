@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Iterator
 
 
 class Node:
@@ -12,7 +12,7 @@ class StackWithLinkedList:
         self.max_capacity = max_capacity
         self.head = None
 
-    def __iter__(self) -> Any:
+    def __iter__(self) -> Iterator:
         """Get each data by sequential."""
         node = self.head
         while node:
