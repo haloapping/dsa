@@ -13,24 +13,49 @@ class StackWithLinkedList:
         self.head = None
 
     def __iter__(self) -> Iterator:
-        """Get each data by sequential."""
+        """Create generator to get all value in stack.
+
+        Yields:
+            Iterator: All value in stack.
+        """
         node = self.head
         while node:
             yield node.data
             node = node.next
 
     def __len__(self) -> int:
-        """Get number of node."""
+        """Get number of value in stack.
+
+        Returns:
+            int: number of value in stack.
+        """
         return len(tuple(iter(self)))
 
     def is_empty(self) -> bool:
+        """Check if stack is empty or not.
+
+        Returns:
+            bool: 0 is not empty and 1 is empty.
+        """
         return self.head is None
 
     def is_full(self) -> bool:
+        """Check if stack is full or not.
+
+        Returns:
+            bool: 0 is not full and is full.
+        """
         return len(tuple(iter(self))) == self.max_capacity
 
     def push(self, data: Any) -> str:
-        """Push data on top stack."""
+        """Add new value on top stack.
+
+        Args:
+            data (Any): entered value.
+
+        Returns:
+            str: message after enter value.
+        """
         if self.is_full():
             return "Stack is full."
         elif self.head is None:
@@ -42,7 +67,11 @@ class StackWithLinkedList:
         return f"Push {data}."
 
     def pop(self) -> str:
-        """Remove data from top stack."""
+        """Delete value from top stack.
+
+        Returns:
+            str: Message after delete value.
+        """
         if self.is_empty():
             return "Stack is empty."
 
@@ -56,12 +85,28 @@ class StackWithLinkedList:
         return f"Pop {delete_data}."
 
     def peek(self) -> str:
-        """Check value of data from top stack."""
+        """Check top value in stack.
+
+        Returns:
+            str: Message after check top value.
+        """
         return "Stack is empty." if self.is_empty() else str(self.head.data)
 
     def is_data_in_stack(self, data: Any) -> bool:
-        """Check data exist in stack."""
+        """Check if certain data is exist in stack.
+
+        Args:
+            data (Any): searched value.
+
+        Returns:
+            bool: 0 is not found and 1 is found.
+        """
         return data in list(self)
 
     def print(self) -> str:
+        """Get all value in stack in string format
+
+        Returns:
+            str: all value in string format.
+        """
         return "Stack is empty." if self.is_empty() else "<-".join([str(data) for data in self])

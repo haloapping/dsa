@@ -24,15 +24,25 @@ class QueueWithLinkedListTest(unittest.TestCase):
         queue.enqueue(1)
         self.assertFalse(queue.is_empty())
 
-    def test_peek_when_queue_is_empty(self):
+    def test_peek_front_when_queue_is_empty(self):
         queue = QueueWithLinkedList(5)
-        self.assertEqual(queue.peek(), "Queue is empty.")
+        self.assertEqual(queue.peek_front(), "Queue is empty.")
 
-    def test_peek_when_queue_is_not_empty(self):
+    def test_peek_front_when_queue_is_not_empty(self):
         queue = QueueWithLinkedList(5)
         for i in range(5):
             queue.enqueue(i)
-        self.assertEqual(queue.peek(), "Peek 0.")
+        self.assertEqual(queue.peek_front(), "Peek 0.")
+
+    def test_peek_rear_when_queue_is_empty(self):
+        queue = QueueWithLinkedList(5)
+        self.assertEqual(queue.peek_rear(), "Queue is empty.")
+
+    def test_peek_rear_when_queue_is_not_empty(self):
+        queue = QueueWithLinkedList(5)
+        for i in range(5):
+            queue.enqueue(i)
+        self.assertEqual(queue.peek_rear(), "Peek 4.")
 
     def test_enqueue_with_one_data(self):
         queue = QueueWithLinkedList(5)

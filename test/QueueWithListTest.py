@@ -50,28 +50,28 @@ class QueueWithListTest(unittest.TestCase):
         queue.enqueue(5)
         self.assertFalse(queue.is_data_in_stack(6), False)
 
-    def test_peek_first_data_when_empty(self):
+    def test_peek_front_when_empty(self):
         queue = QueueWithList(5)
-        self.assertEqual(queue.peek_first_data(), "Queue is empty.")
+        self.assertEqual(queue.peek_front(), "Queue is empty.")
 
-    def test_peek_first_data_when_not_empty(self):
+    def test_peek_front_when_not_empty(self):
         queue = QueueWithList(5)
         queue.enqueue(1)
         queue.enqueue(2)
         queue.enqueue(3)
         queue.enqueue(4)
         queue.enqueue(5)
-        self.assertEqual(queue.peek_first_data(), "1")
+        self.assertEqual(queue.peek_front(), "1")
 
-    def test_peek_last_data_when_empty(self):
+    def test_peek_rear_when_empty(self):
         queue = QueueWithList(5)
-        self.assertEqual(queue.peek_last_data(), "Queue is empty.")
+        self.assertEqual(queue.peek_rear(), "Queue is empty.")
 
-    def test_peek_last_data_when_not_empty(self):
+    def test_peek_rear_when_not_empty(self):
         queue = QueueWithList(5)
         for i in range(5):
             queue.enqueue(i)
-        self.assertEqual(queue.peek_last_data(), "4")
+        self.assertEqual(queue.peek_rear(), "4")
 
     def test_print_when_empty(self):
         queue = QueueWithList(5)
