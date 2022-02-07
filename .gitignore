@@ -1,6 +1,2 @@
 .vscode
 __pycache__
-binary_tree
-BinaryTreeBasicTest.py
-SinglyLinkedListManual.py
-DoublyLinkedListManual.py
