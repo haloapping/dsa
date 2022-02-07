@@ -87,4 +87,4 @@ class BinaryTreeTest(unittest.TestCase):
         root.right = Node(4)
         root.right.right = Node(5)
         self.assertEqual(binary_tree_basic.display(
-            "random", root), "Random not found. Use pre, in, post keyword.")
+            "random", root), "Random not found. Use pre, in, or post keyword.")

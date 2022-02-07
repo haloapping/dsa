@@ -67,4 +67,4 @@ class BinaryTreeBasic:
         elif mode == "in":
             self.inorder(root)
         else:
-            return f"{mode.capitalize()} not found. Use pre, in, post keyword."
+            return f"{mode.capitalize()} not found. Use pre, in, or post keyword."
